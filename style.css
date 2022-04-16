@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;500;700;900&display=swap');
+
+:root {
+    --Pale-blue: hsl(225, 100%, 94%);
+    --Bright-blue: hsl(245, 75%, 52%);
+    --Very-pale-blue: hsl(225, 100%, 98%);
+    --Desaturated-blue: hsl(224, 23%, 55%);
+    --Dark-blue: hsl(223, 47%, 23%);
+}
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Red Hat Display', sans-serif;
+}
+
+.container {
+    min-height: 100vh;
+    background-color: var(--Pale-blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url("./images/pattern-background-mobile.svg");
+    background-position: top top;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+@media (min-width: 768px) {
+    .container {
+        background-image: url("./images/pattern-background-desktop.svg");
+    }
+}
+
+.card {
+    width: 88%;
+    background-color: white;
+    border-radius: 20px;
+    max-width: 355px;
+}
+
+#hero {
+    width: 100%;
+    border-radius: 20px 20px 0 0;
+}
+
+.content {
+    text-align: center;
+    padding: 20px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    
+}
+
+h2 {
+    color: var(--Dark-blue);
+}
+
+p {
+    color: var(--Desaturated-blue);
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.paragraph {
+    line-height: 25px;
+}
+
+.annual-plan-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    background-color: var(--Very-pale-blue);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+#change:hover {
+    color: hsl(245, 75%, 52%, 0.7);
+}
+
+.annual-plan-container a {
+    color: var(--Bright-blue);
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.annual-plan {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#annual-plan-text {
+    color: var(--Dark-blue);
+    font-weight: 700;
+}
+
+.buttons-container {
+    width: 100%;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    gap: 10px;
+}
+
+.btn, :active {
+    display: block;
+    width: 100%;
+    cursor: pointer;
+    font-family: inherit;
+    border: none;
+    border-radius: 8px;
+    font-weight: 700;
+    padding: 14px;
+    font-size: 14px;
+    background: transparent;
+    color: var(--Desaturated-blue);
+}
+
+.btn:hover {
+    color: var(--Dark-blue);
+}
+
+.btn-blue {
+    color: white;
+    background: var(--Bright-blue);
+}
+
+.btn-blue:hover {
+    background-color: hsl(245, 75%, 52%, 0.7);
+    color: white;
+}
+
+
+
